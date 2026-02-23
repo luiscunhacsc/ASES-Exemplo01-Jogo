@@ -11,19 +11,33 @@ O **JavaQuest** é um jogo simples em 2D desenvolvido nativamente em Java (com `
 
 O projeto é acompanhado de um relatório explícito descrevendo a arquitetura completa em PlantUML e documentando a lógica implementada.
 
-## 🛠 Pré-Requisitos
+## 🛠 Pré-Requisitos (Preparar o Computador)
 
-Para compilares e correres este jogo na tua máquina, só precisas do Java Development Kit (JDK) instalado (versão 8 ou superior).
+Para editares, compilares e correres este jogo na tua máquina, recomendamos utilizares o **Visual Studio Code (VS Code)**, que é o padrão da indústria.
 
-* [Download do JDK (Oracle)](https://www.oracle.com/java/technologies/downloads/) ou OpenJDK.
+### 1. Instalação do Editor VS Code
+1. Acede a [code.visualstudio.com](https://code.visualstudio.com/) e descarrega a versão para o teu ambiente de trabalho.
+2. Abre o instalador. **⚠️ ATENÇÃO BASTANTE IMPORTANTE:** Quando chegares ao ecrã "Select Additional Tasks" (Selecionar Tarefas Adicionais), certifica-te de que as opções que costumam vir *desmarcadas por omissão* ficam **ATIVAS**:
+   * ✅ *Add "Open with Code" action to Windows Explorer file context menu*
+   * ✅ *Add "Open with Code" action to Windows Explorer directory context menu*
+   > *Dica: Estas duas opções ajudam imenso, pois passam a permitir que cliques com o botão direito do rato na pasta do jogo ou num ficheiro solto e escolhas abrir diretamente esse código sem truques adicionais.*
+   * ✅ *Register Code as an editor for supported file types*
+   * ✅ *Add to PATH (requires shell restart)* - (Esta geralmente já vem ativa, mas confere!)
 
-Para confirmar se tens o Java instalado de forma correta, abre uma Consola do Windows ou Terminal e escreve:
+### 2. Instalação da Extensão Java (que já inclui o JDK)
+Depois de leres estas instruções, abre a tua nova pasta de projeto (`Jogo/`) no VS Code:
+1. Clica no menu vertical esquerdo de Extensões do VS Code (ou pressiona o atalho mágico `Ctrl+Shift+X`).
+2. Pesquisa por **"Extension Pack for Java"** (Publicado pela *Microsoft*). É um pacote de 6 ferramentas fundamentais para programar bem em POO. Clica em instalar.
+3. Se tu (como muitos alunos) **não** tens o clássico JDK de desenvolvimento do Java pré-instalado na tua máquina, não te preocupes: o VS Code irá exibir um pop-up útil perto da zona inferior direita a avisar que te falta um JDK ativo, oferecendo-se para instalar um. Confirma e deixa o ecossistema configurar automaticamente o teu compilador!
+
+Para confirmares que ambos estão instalados e a funcionar com o teu terminar moderno, abre o terminal do próprio VS Code (menu Superior `Terminal -> New Terminal`) e escreve:
 ```bash
 java -version
 ```
 ```bash
 javac -version
 ```
+Se receberes uma resposta com o número da instalação e não um erro em vermelho, estás pronto!
 
 ## 🚀 Como Compilar e Jogar
 
