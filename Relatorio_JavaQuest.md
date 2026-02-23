@@ -27,7 +27,7 @@ No ensino da engenharia de software, conceitos abstratos como interfaces e polim
 
 Para o desenho de diagramas de uma forma integrada ao código (fácil revisão no GitHub), recomendamos aos alunos que recorram ao formato **PlantUML**. Abaixo está a representação gráfica das ações possíveis pelo jogador:
 
-![Diagrama de Casos de Uso](casos_de_uso.png)
+![Diagrama de Casos de Uso](assets/UC-Jogo.png)
 
 A sintaxe de PlantUML é bastante intuitiva. O código que gerou o diagrama de casos de uso acima é o seguinte:
 
@@ -57,7 +57,11 @@ Jogador --> UC4
 
 ## 6. Análise de Domínio / Modelo Entidade-Relação
 
-A análise base de domínio foca-se nas regras partilhadas de interações e na visualização lógica das interfaces base da Game Engine.
+A análise base de domínio foca-se nas regras partilhadas de interações e na visualização lógica das interfaces base da Game Engine. O diagrama seguinte (em formato **PlantUML**) resume as relações de herança e composição entre as classes do jogo:
+
+![Diagrama de Classes](assets/Diagrama_Classes.png)
+
+Abaixo, os alunos podem consultar o código fonte deste diagrama:
 
 ```plantuml
 @startuml
