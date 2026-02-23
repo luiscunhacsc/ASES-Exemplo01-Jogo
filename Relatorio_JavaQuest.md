@@ -59,7 +59,7 @@ Jogador --> UC4
 
 A análise base de domínio foca-se nas regras partilhadas de interações e na visualização lógica das interfaces base da Game Engine. O diagrama seguinte (em formato **PlantUML**) resume as relações de herança e composição entre as classes do jogo:
 
-![Diagrama de Classes](assets/Diagrama_Classes.png)
+![Diagrama de Classes](assets/Classes-Jogo.png)
 
 Abaixo, os alunos podem consultar o código fonte deste diagrama:
 
