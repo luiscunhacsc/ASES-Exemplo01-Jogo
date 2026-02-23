@@ -25,19 +25,21 @@ No ensino da engenharia de software, conceitos abstratos como interfaces e polim
 
 ## 4. Diagramas de Casos de Uso
 
-```mermaid
-usecaseDiagram
-    actor Jogador
-    
-    usecase "Mover Personagem" as UC1
-    usecase "Atacar Inimigo" as UC2
-    usecase "Apanhar Item" as UC3
-    usecase "Visualizar Estado (HUD)" as UC4
+```plantuml
+@startuml
+left to right direction
+actor "Jogador" as Jogador
 
-    Jogador --> UC1
-    Jogador --> UC2
-    Jogador --> UC3
-    Jogador --> UC4
+usecase "Mover Personagem" as UC1
+usecase "Atacar Inimigo" as UC2
+usecase "Apanhar Item" as UC3
+usecase "Visualizar Estado (HUD)" as UC4
+
+Jogador --> UC1
+Jogador --> UC2
+Jogador --> UC3
+Jogador --> UC4
+@enduml
 ```
 
 ## 5. User Stories
@@ -51,70 +53,68 @@ usecaseDiagram
 
 A análise base de domínio foca-se nas regras partilhadas de interações e na visualização lógica das interfaces base da Game Engine.
 
-```mermaid
-classDiagram
-    class Entity {
-        <<interface>>
-        +String getName()
-        +int getX()
-        +int getY()
-        +setPosition(int x, int y)
-        +draw(Graphics g, int tileSize)
-    }
+```plantuml
+@startuml
+interface Entity {
+    +String getName()
+    +int getX()
+    +int getY()
+    +setPosition(int x, int y)
+    +draw(Graphics g, int tileSize)
+}
 
-    class Actor {
-        <<abstract>>
-        #int health
-        #int maxHealth
-        +takeDamage(int)
-        +heal(int)
-        +isAlive()
-    }
-    
-    class Item {
-        <<abstract>>
-        +onCollect(Hero hero)*
-    }
+abstract class Actor {
+    #int health
+    #int maxHealth
+    +takeDamage(int amount)
+    +heal(int amount)
+    +isAlive() : boolean
+}
 
-    class Hero {
-        -int attackPower
-        -int score
-        +addScore()
-        +draw(Graphics g, int tileSize)
-    }
+abstract class Item {
+    +onCollect(Hero hero)
+}
 
-    class Enemy {
-        -int attackPower
-        +draw(Graphics g, int tileSize)
-    }
+class Hero {
+    -int attackPower
+    -int score
+    +addScore(int points)
+    +draw(Graphics g, int tileSize)
+}
 
-    class Potion {
-        +onCollect(Hero hero)
-        +draw(Graphics g, int tileSize)
-    }
+class Enemy {
+    -int attackPower
+    +draw(Graphics g, int tileSize)
+}
 
-    class Sword {
-        +onCollect(Hero hero)
-        +draw(Graphics g, int tileSize)
-    }
+class Potion {
+    +onCollect(Hero hero)
+    +draw(Graphics g, int tileSize)
+}
 
-    class GameEngine {
-        -List~Enemy~ enemies
-        -List~Item~ items
-        -Hero hero
-        +moveHero(int dx, int dy)
-    }
+class Sword {
+    +onCollect(Hero hero)
+    +draw(Graphics g, int tileSize)
+}
 
-    Entity <|.. Actor
-    Entity <|.. Item
-    Actor <|-- Hero
-    Actor <|-- Enemy
-    Item <|-- Potion
-    Item <|-- Sword
-    
-    GameEngine o-- Hero
-    GameEngine o-- Enemy
-    GameEngine o-- Item
+class GameEngine {
+    -List<Enemy> enemies
+    -List<Item> items
+    -Hero hero
+    +moveHero(int dx, int dy)
+}
+
+Entity <|.. Actor
+Entity <|.. Item
+Actor <|-- Hero
+Actor <|-- Enemy
+Item <|-- Potion
+Item <|-- Sword
+
+GameEngine o-- Hero
+GameEngine o-- Enemy
+GameEngine o-- Item
+@enduml
 ```
 
 ## 7. Análise da Estrutura do Projeto
