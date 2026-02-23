@@ -25,10 +25,16 @@ No ensino da engenharia de software, conceitos abstratos como interfaces e polim
 
 ## 4. Diagramas de Casos de Uso
 
+Para o desenho de diagramas de uma forma integrada ao código (fácil revisão no GitHub), recomendamos aos alunos que recorram ao formato **PlantUML**. Abaixo está a representação gráfica das ações possíveis pelo jogador:
+
+![Diagrama de Casos de Uso](casos_de_uso.png)
+
+A sintaxe de PlantUML é bastante intuitiva. O código que gerou o diagrama de casos de uso acima é o seguinte:
+
 ```plantuml
 @startuml
 left to right direction
-actor "Jogador" as Jogador
+actor Jogador
 
 usecase "Mover Personagem" as UC1
 usecase "Atacar Inimigo" as UC2
