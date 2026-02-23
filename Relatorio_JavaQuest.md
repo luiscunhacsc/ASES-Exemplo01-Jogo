@@ -146,10 +146,10 @@ O código do *JavaQuest* mapeia perfeitamente para os ensinamentos base de Progr
 
 ### 8.2. O Jogo em Ação
 ![Gameplay Inicial](assets/image03.png)
-![Progressão e Combates](assets/image05.png)
+![Progressão e Combates](assets/image04.png)
 
 ### 8.3. Conclusão e Vitória
-![Ecrã de Vitória Centrado](assets/image04.png)
+![Ecrã de Vitória](assets/image05.png)
 
 ## 9. Conclusão Geral / Reflexão final
 
