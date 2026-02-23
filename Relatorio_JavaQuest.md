@@ -138,10 +138,18 @@ O código do *JavaQuest* mapeia perfeitamente para os ensinamentos base de Progr
 
 ## 8. Apresentação do Projeto Final: "Screenshots" da UI
 
-> *[Nota para o Aluno: Inserir aqui as capturas de ecrã tiradas ao rodar a app]*
-> Imagem 1: Ecrã inicial com o Jogador, os Inimigos e itens pelo mapa.
-> Imagem 2: Notificações do HUD ("Mensagem central de combates") durante uma colisão.
-> Imagem 3: Ecrã de "Vitória" após exterminar o "Boss Singleton".
+> Abaixo encontram-se as capturas de ecrã do jogo em execução, demonstrando as interações descritas:
+
+### 8.1. Ecrãs de Boas-Vindas e Instruções
+![Mensagem Boas-Vindas](assets/image01.png)
+![Instruções](assets/image02.png)
+
+### 8.2. O Jogo em Ação
+![Gameplay Inicial](assets/image03.png)
+![Progressão e Combates](assets/image05.png)
+
+### 8.3. Conclusão e Vitória
+![Ecrã de Vitória Centrado](assets/image04.png)
 
 ## 9. Conclusão Geral / Reflexão final
 

@@ -75,13 +75,19 @@ public class GamePanel extends JPanel {
             g.setColor(new Color(0, 0, 0, 150));
             g.fillRect(0, 0, getWidth(), getHeight());
 
+            String title = "FIM DE JOGO";
             g.setColor(Color.RED);
-            g.setFont(new Font("Arial", Font.BOLD, 40));
-            g.drawString("FIM DE JOGO", getWidth() / 2 - 120, getHeight() / 2);
+            Font fontTitle = new Font("Arial", Font.BOLD, 40);
+            g.setFont(fontTitle);
+            int titleWidth = g.getFontMetrics().stringWidth(title);
+            g.drawString(title, (getWidth() - titleWidth) / 2, getHeight() / 2);
 
+            String msg = engine.getLastMessage();
             g.setColor(Color.WHITE);
-            g.setFont(new Font("Arial", Font.PLAIN, 20));
-            g.drawString(engine.getLastMessage(), getWidth() / 2 - 150, getHeight() / 2 + 40);
+            Font fontMsg = new Font("Arial", Font.PLAIN, 20);
+            g.setFont(fontMsg);
+            int msgWidth = g.getFontMetrics().stringWidth(msg);
+            g.drawString(msg, (getWidth() - msgWidth) / 2, getHeight() / 2 + 40);
         }
     }
 }
