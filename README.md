@@ -39,31 +39,19 @@ javac -version
 ```
 Se receberes uma resposta com o número da instalação e não um erro em vermelho, estás pronto!
 
-## 🚀 Como Compilar e Jogar
+## 🚀 Como Compilar e Jogar no VS Code
 
-Para poderes compilar o código fonte que se encontra distribuído por pacotes na pasta `src/pt/javaquest`, segue os seguintes passos:
+Agora que tens o teu ambiente com o **VS Code** e as **Extensões Java** montadas, executar a aplicação torna-se magia de um clique e não precisas daquela linha de comandos clássica! Segue estes três passos simples:
 
-1. **Abre a linha de comandos** na pasta principal deste repositório (`Jogo/`).
-2. **Cria uma pasta chamada `bin`** (se ainda não existir):
-   ```bash
-   mkdir bin
+1. **Abre o ponto de partida:** No explorador de ficheiros à tua esquerda (na barra lateral de cima a baixo do VS Code), navega pela estrutura de pacotes `src > pt > javaquest` e abre com um clique duplo o ficheiro **`Main.java`**.
+2. **Deixa o Java acordar:** Repara na barra de baixo direito do teu editor. O VS Code pode mostrar um ícone de carregamento circular ("*thumbs up*" ou um relógio/ícone rotativo) indicando que a Extensão de Java está a carregar o teu projeto. Aguarda uns segundos.
+3. **Clica em "Run" (Executar):** Procura o clássico método `psvm`! Em Java, toda a vida de uma aplicação começa neste método principal:
+   ```java
+   public static void main(String[] args)
    ```
-3. **Compila o jogo** através do compilador do Java, reencaminhando as classes para a pasta `bin`:
-   *(Para Windows - Linha de Comandos)*
-   ```bash
-   javac -d bin src\pt\javaquest\entities\*.java src\pt\javaquest\engine\*.java src\pt\javaquest\ui\*.java src\pt\javaquest\Main.java
-   ```
-   *(Para macOS/Linux ou Bash Shell)*
-   ```bash
-   javac -d bin src/pt/javaquest/entities/*.java src/pt/javaquest/engine/*.java src/pt/javaquest/ui/*.java src/pt/javaquest/Main.java
-   ```
+   Assim que o ambiente Java estiver totalmento carregado através do "Extension Pack", o VS Code é muito inteligente e vai magicamente fazer aparecer uma palavra que diz **`Run | Debug`** diretamente acima desta linha `main`. 
 
-4. **Executa o jogo** informando o Java do "*classpath*" (`-cp`):
-   ```bash
-   java -cp bin pt.javaquest.Main
-   ```
-
-A parede gráfica abrir-se-á, com direito a instruções e o jogo inicia logo em seguida.
+Carrega simplesmente em **Run**. O teu compilador e o VS Code farão todo o trabalho de compilar as dezenas de classes e interligá-las para que a janela gráfica do **JavaQuest** apareça no teu ecrã com as instruções em menos de dois segundos!
 
 ## 🎮 Como Jogar? (Mecânicas e Estratégia)
 
